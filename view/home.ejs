@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <%- include('./partials/head') %>
+   <title>Home Page</title>
+</head>
+
+<body>
+   <%- include('./partials/nav') %>
+      <div class="container mt-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+         <% events.forEach(event=> { %>
+            <div class="col mb-4">
+               <div class="card h-100">
+                  <div class="card-body">
+                     <h5 class="card-title">
+                        <%= event.eventName %>
+                     </h5>
+                     <h4>
+                        created by <%= event.organizerName %>
+                     </h4>
+                     <a href="/events/<%= event._id %>" class="btn btn-primary">Register</a>
+                  </div>
+               </div>
+            </div>
+            <% }) %>
+      </div>
+      <%- include('./partials/scripts') %>
+</body>
+
+</html>

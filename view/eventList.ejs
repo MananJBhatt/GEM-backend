@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <% events.forEach(event=> { %>
+            <div class="col mb-4">
+               <div class="card h-100">
+                  <div class="card-body">
+                     <h5 class="card-title">
+                        <%= event.eventName %>
+                        <%= event.eventDescription %>
+                        <%= event.eventDate %>
+                        <%= event.organizedBy %>
+                        <%= user.fullName %>
+                     </h5>
+                     <h4>
+                        created by <%= event.organizedBy %>
+                     </h4>
+                     <p>
+                        organzier email <%= event.name%>
+                     </p>
+                     <a href="/events/<%= event._id %>" class="btn btn-primary">Register</a>
+                  </div>
+               </div>
+            </div>
+            <% }) %>
+    </p>
+    
+</body>
+</html>

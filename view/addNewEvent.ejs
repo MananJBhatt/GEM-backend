@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>New Event </title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+        <div class="container mt-3">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                    <form action="/events" method="post" enctype="multipart/form-data">
+                        <!-- <div class="mb-3">
+                            <label for="coverImage" class="form-label">Cover Image</label>
+                            <input type="file" class="form-control" id="coverImage" name="coverImage"
+                                aria-describedby="emailHelp">
+                        </div> -->
+                        <div class="mb-3">
+                            <label for="eventName" class="form-label">Event Name</label>
+                            <input type="text" class="form-control" id="eventName" name="eventName"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventDescription">Event Description</label>
+                            <textarea class="form-control" id="eventDescription" name="eventDescription"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="eventDate" name="eventDate"
+                                aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('./partials/scripts') %>
+</body>
+
+</html>

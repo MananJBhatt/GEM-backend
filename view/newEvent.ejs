@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>New Event </title>
+</head>
+<form action="/events" method="post">
+    <input type="text" class="form-control" id="eventName" name="eventName"
+    aria-describedby="emailHelp">
+    <textarea class="form-control" id="eventDescription" name="eventDescription"></textarea>
+    <input type="date" class="form-control" id="eventDate" name="eventDate"
+    aria-describedby="emailHelp" required>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
